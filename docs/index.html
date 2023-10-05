@@ -1,0 +1,61 @@
+<html lang="tr">
+	<head>
+		<link
+			rel="icon"
+			href="sans_s_face__high_resolution_render__by_axis_strike_d9udxh2-pre.ico"
+			type="image/x-icon"
+		/>
+		<script src="snow.js" type="text/javascript"></script>
+		<script language="JavaScript">
+			var default1 = "Türkçe"; // Genel ba�l�k
+			var text1 = "Sans"; // 1. Yaz�
+			var text2 = "Savaşı"; // 2. Yaz�
+			var text3 = "Undertale"; // 3. Yaz�
+			var changeRate = 1000; // Zaman ayar� [1000 = 1 Saniye]
+			var messageNumber = 0;
+
+			function changeStatus() {
+				if (messageNumber == 0) {
+					window.status = default1;
+					document.title = default1;
+				} else if (messageNumber == 1) {
+					window.status = text1;
+					document.title = text1;
+				} else if (messageNumber == 2) {
+					window.status = text2;
+					document.title = text2;
+				} else if (messageNumber == 3) {
+					window.status = text3;
+					document.title = text3;
+					messageNumber = 0;
+				}
+
+				messageNumber++;
+				setTimeout("changeStatus();", changeRate);
+			}
+
+			changeStatus();
+		</script>
+		<script scr="title.js" type="text/javascript"></script>
+		<body bgcolor="black">
+			<style>
+				body {
+					background-image: url("images/sans.jpg");
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-attachment: fixed;
+				}
+			</style>
+			<style type="text/css">
+				::selection {
+					background: rgb(102, 102, 102);
+				}
+			</style>
+			<center>
+				<a target="_blank" href="game.html">
+					<img src="images/btn_oyna.png" />
+				</a>
+			</center>
+		</body>
+	</head>
+</html>
